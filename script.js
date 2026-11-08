@@ -9,7 +9,7 @@ const SITE_CONFIG = {
 
   // 2) 쓸모야 캐릭터 이미지 — images 폴더에 그림을 넣고 경로를 적어주세요.
   //    예: "images/sslmoya.png"  (비워두면 임시 캐릭터가 보여요)
-  characterImage: "",
+  characterImage: "images/sslmoya.jpg",
 
   // 3) 작품 갤러리 — 실제 작품이 생기면 내용을 채워주세요.
   //    category: "emotion"(감성 그림) / "popup"(팝업 스타일) / "ai"(AI 창작)
@@ -77,7 +77,8 @@ const SITE_CONFIG = {
     const src = SITE_CONFIG.characterImage.trim();
     if (!src) return;
     $$(".js-character").forEach((img) => {
-      img.onerror = () => { img.onerror = null; img.src = PLACEHOLDER_CHAR; };
+      img.onerror = () => { img.onerror = null; img.src = PLACEHOLDER_CHAR; img.classList.remove("is-photo"); };
+      img.classList.add("is-photo");   // 배경이 있는 그림(사진형)에 맞는 모양으로 표시
       img.src = src;
       if (img.alt) img.alt = "쓸모야 캐릭터";
     });
