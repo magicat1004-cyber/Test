@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>쓸모야의 작은 세상</title>
+  <meta name="description" content="평범한 일상에 상상을 더하다. 작은 종이인형 쓸모야가 건네는 다정한 이야기." />
+  <meta name="theme-color" content="#FAF6EE" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== 상단 메뉴 ===== -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">쓸모야의 작은 세상</a>
+    <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="nav__menu" id="navMenu">
+      <a href="#about">쓸모야 소개</a>
+      <a href="#gallery">작품 갤러리</a>
+      <a href="#learning">AI와 배움</a>
+      <a href="#visit" class="nav__cta js-threads-link">스레드 놀러가기</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== 1. 메인 화면 ===== -->
+    <section class="hero" id="home">
+      <!-- 팝업북 도시 배경 -->
+      <div class="popup-city" aria-hidden="true">
+        <svg class="city city--back" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
+          <path fill="#E9DFCF" d="M0 400V250h70v-60h50v-40h40v100h60V170h90v80h40V120h80v130h50V200h60v-60h50v60h60v100h70V160h90v90h60V190h70v60h80v-90h60v240z"/>
+        </svg>
+        <svg class="city city--mid" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
+          <g fill="#D9CBB2">
+            <path d="M40 400V230h110v170zM180 400V170h80v-30h40v260zM340 400V260h90v140zM470 400V190h120v210zM640 400V240h70v-40h60v200zM810 400V150h100v250zM950 400V250h90v150zM1070 400V200h110v200z"/>
+          </g>
+          <g fill="#FAF6EE" opacity="0.75">
+            <rect x="200" y="200" width="14" height="18"/><rect x="230" y="200" width="14" height="18"/><rect x="200" y="240" width="14" height="18"/><rect x="230" y="280" width="14" height="18"/>
+            <rect x="495" y="220" width="16" height="20"/><rect x="530" y="220" width="16" height="20"/><rect x="565" y="260" width="16" height="20"/><rect x="495" y="300" width="16" height="20"/>
+            <rect x="835" y="180" width="14" height="18"/><rect x="865" y="180" width="14" height="18"/><rect x="835" y="230" width="14" height="18"/><rect x="865" y="280" width="14" height="18"/>
+          </g>
+        </svg>
+        <svg class="city city--front" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMax slice">
+          <g fill="#B9C6AE">
+            <path d="M0 400V300c30-40 80-40 110 0v100z"/>
+            <circle cx="150" cy="330" r="34"/><rect x="146" y="340" width="8" height="60" fill="#A28B6C"/>
+            <path d="M260 400V310h120v90z" fill="#C9B79A"/>
+            <circle cx="1060" cy="320" r="40"/><rect x="1056" y="330" width="8" height="70" fill="#A28B6C"/>
+            <path d="M900 400V320h110v80z" fill="#C9B79A"/>
+            <path d="M1120 400V300c30-30 60-30 80 0v100z"/>
+          </g>
+        </svg>
+        <div class="book-fold"></div>
+        <span class="cloud cloud--1"></span>
+        <span class="cloud cloud--2"></span>
+      </div>
+
+      <div class="hero__inner">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Threads · 쓸모야의 작은 세상</p>
+          <h1 class="hero__title">평범한 일상에<br />상상을 더하다.</h1>
+          <p class="hero__lead">작은 종이인형 쓸모야가 건네는 다정한 이야기.</p>
+          <div class="hero__actions">
+            <a href="#" class="btn btn--primary js-threads-link">
+              <span class="threads-icon" aria-hidden="true">@</span>
+              스레드 방문하기
+            </a>
+            <a href="#about" class="btn btn--ghost">쓸모야 알아보기</a>
+          </div>
+          <p class="threads-notice js-threads-notice" hidden>※ 스레드 주소가 아직 입력되지 않았어요. (script.js에서 입력)</p>
+          <a class="handle-badge js-threads-handle" hidden>
+            <span class="handle-badge__dot" aria-hidden="true"></span>
+            Threads <strong class="js-threads-handle-name"></strong>
+          </a>
+        </div>
+
+        <div class="hero__character reveal reveal--delay">
+          <div class="paper-stage">
+            <!-- 캐릭터 이미지: script.js 의 characterImage 에 파일 경로를 넣으면 자동 교체 -->
+            <img class="js-character" src="images/sslmoya-placeholder.svg" alt="쓸모야 캐릭터 (임시 이미지)" />
+            <div class="paper-stage__shadow"></div>
+          </div>
+          <span class="placeholder-tag js-placeholder-tag">임시 캐릭터 이미지</span>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="아래로 스크롤"><span></span></a>
+    </section>
+
+    <!-- ===== 2. 쓸모야 소개 ===== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__visual reveal">
+          <div class="polaroid">
+            <img class="js-character" src="images/sslmoya-placeholder.svg" alt="쓸모야 캐릭터 (임시 이미지)" />
+            <p class="polaroid__caption">오늘도 작은 하루를 기록하는 중</p>
+          </div>
+          <ul class="outfit">
+            <li><span class="swatch" style="background:#FFFFFF"></span>흰 상의</li>
+            <li><span class="swatch" style="background:#A9C3D8"></span>연청 바지</li>
+            <li><span class="swatch" style="background:#7FA37A"></span>초록 운동화</li>
+            <li><span class="swatch" style="background:#C9AE8A"></span>작은 가방</li>
+          </ul>
+        </div>
+        <div class="about__text reveal">
+          <p class="eyebrow">About</p>
+          <h2 class="section__title">안녕하세요,<br />작은 종이인형 쓸모야예요.</h2>
+          <p>쓸모야는 일상의 감정을 그림과 글로 기록하는 작은 캐릭터예요. 출근길의 하늘, 조용한 카페의 오후, 괜히 마음이 쓰이던 하루까지 — 지나가 버리기 쉬운 순간들을 종이 위에 살며시 붙잡아 둡니다.</p>
+          <p>거창하지 않아도 괜찮아요. 누구에게나 쓸모 있는 하루가 있다는 걸, 쓸모야는 작은 이야기로 전하고 싶어요.</p>
+          <div class="keywords">
+            <span>#일상기록</span><span>#감성글</span><span>#종이인형</span><span>#팝업북</span><span>#AI창작</span>
+          </div>
+
+          <!-- 오늘의 다정한 한마디 -->
+          <div class="kind-word">
+            <p class="kind-word__label">오늘의 다정한 한마디</p>
+            <blockquote class="kind-word__text" id="kindText">오늘 하루도 충분히 잘 해냈어요.</blockquote>
+            <button class="btn btn--sage" id="kindBtn" type="button">
+              <span aria-hidden="true">✦</span> 다른 한마디 듣기
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. 작품 갤러리 ===== -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="section__title">쓸모야의 작품 갤러리</h2>
+          <p class="section__desc">감성 그림, 팝업 스타일 작품, AI 창작 작품을 이곳에 소개할 예정이에요.<br />지금 보이는 카드는 <strong>작품이 들어갈 자리</strong>입니다.</p>
+        </div>
+
+        <div class="filter reveal" role="tablist" aria-label="작품 분류">
+          <button class="filter__btn is-active" data-filter="all" type="button">전체</button>
+          <button class="filter__btn" data-filter="emotion" type="button">감성 그림</button>
+          <button class="filter__btn" data-filter="popup" type="button">팝업 스타일</button>
+          <button class="filter__btn" data-filter="ai" type="button">AI 창작</button>
+        </div>
+
+        <!-- 카드는 script.js 의 gallery 목록으로 자동 생성됩니다 -->
+        <div class="gallery__grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== 4. AI와 함께하는 배움 ===== -->
+    <section class="section learning" id="learning">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="eyebrow">Learning with AI</p>
+          <h2 class="section__title">AI와 함께하는 배움</h2>
+          <p class="section__desc">AI와 함께 배우며 직접 만들어 본 작은 디지털 작업들이에요.</p>
+        </div>
+
+        <!-- 카드는 script.js 의 learning 목록으로 자동 생성됩니다 -->
+        <div class="learning__grid" id="learningGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== 5. 스레드로 놀러 오세요 ===== -->
+    <section class="section visit" id="visit">
+      <div class="container">
+        <div class="visit__card reveal">
+          <div class="visit__fold" aria-hidden="true"></div>
+          <img class="visit__character js-character" src="images/sslmoya-placeholder.svg" alt="" aria-hidden="true" />
+          <p class="eyebrow">Come visit</p>
+          <h2 class="section__title">스레드로 놀러 오세요</h2>
+          <a class="visit__handle js-threads-handle" hidden><span class="js-threads-handle-name"></span></a>
+          <p class="visit__desc">매일의 작은 이야기와 새로운 작품은 스레드에서 가장 먼저 만나요.<br />다정한 댓글 하나가 쓸모야에게 큰 힘이 돼요.</p>
+          <a href="#" class="btn btn--primary btn--lg js-threads-link">
+            <span class="threads-icon" aria-hidden="true">@</span>
+            <span class="js-threads-label">쓸모야 스레드 놀러가기</span>
+          </a>
+          <p class="threads-notice js-threads-notice" hidden>※ 스레드 프로필 주소 입력 예정 — script.js 의 threadsUrl 에 주소를 넣어주세요.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> 쓸모야의 작은 세상</p>
+    <p class="footer__sub">평범한 일상에 상상을 더하다.</p>
+    <p class="footer__handle"><a class="js-threads-handle" hidden>Threads <span class="js-threads-handle-name"></span></a></p>
+  </footer>
+
+  <!-- ===== 작품 상세 팝업 ===== -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" aria-label="닫기" data-close>&times;</button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__body">
+        <span class="chip" id="modalCategory"></span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p class="modal__meta" id="modalMeta"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 안내 메시지 -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
